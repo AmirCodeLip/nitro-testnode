@@ -153,7 +153,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:8547:8547"
+      - "8547:8547"
       - "127.0.0.1:8548:8548"
       - "127.0.0.1:9642:9642"
     volumes:
@@ -168,7 +168,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:8647:8547"
+      - "8647:8547"
       - "127.0.0.1:8648:8548"
     volumes:
       - "seqdata_b:/home/user/.arbitrum/local/nitro"
@@ -182,7 +182,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:8747:8547"
+      - "8747:8547"
       - "127.0.0.1:8748:8548"
     volumes:
       - "seqdata_c:/home/user/.arbitrum/local/nitro"
@@ -196,7 +196,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:8847:8547"
+      - "8847:8547"
       - "127.0.0.1:8848:8548"
     volumes:
       - "seqdata_d:/home/user/.arbitrum/local/nitro"
@@ -226,7 +226,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:8147:8547"
+      - "8147:8547"
       - "127.0.0.1:8148:8548"
     volumes:
       - "poster-data:/home/user/.arbitrum/local/nitro"
@@ -241,7 +241,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:9147:8547"
+      - "9147:8547"
       - "127.0.0.1:9148:8548"
     volumes:
       - "poster-data-b:/home/user/.arbitrum/local/nitro"
@@ -256,7 +256,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:9247:8547"
+      - "9247:8547"
       - "127.0.0.1:9248:8548"
     volumes:
       - "poster-data-c:/home/user/.arbitrum/local/nitro"
@@ -271,7 +271,7 @@ services:
     pid: host # allow debugging
     image: nitro-node-dev-testnode
     ports:
-      - "127.0.0.1:8247:8547"
+      - "8247:8547"
       - "127.0.0.1:8248:8548"
     volumes:
       - "validator-data:/home/user/.arbitrum/local/nitro"
