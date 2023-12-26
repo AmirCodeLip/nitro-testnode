@@ -19,13 +19,13 @@ services:
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     env_file:
-      -  ./blockscout/nitro.env
+      - ./blockscout/nitro.env
     environment:
-        ETHEREUM_JSONRPC_VARIANT: 'geth'
-        ETHEREUM_JSONRPC_HTTP_URL: http://sequencer:8547/
-        INDEXER_DISABLE_PENDING_TRANSACTIONS_FETCHER: "true"
-        DATABASE_URL: postgresql://postgres:@postgres:5432/blockscout
-        ECTO_USE_SSL: "false"
+      ETHEREUM_JSONRPC_VARIANT: 'geth'
+      ETHEREUM_JSONRPC_HTTP_URL: http://sequencer:8547/
+      INDEXER_DISABLE_PENDING_TRANSACTIONS_FETCHER: "true"
+      DATABASE_URL: postgresql://postgres:@postgres:5432/blockscout
+      ECTO_USE_SSL: "false"
     ports:
       - "127.0.0.1:4000:4000"
 
@@ -34,9 +34,9 @@ services:
     restart: always
     container_name: 'postgres'
     environment:
-        POSTGRES_PASSWORD: ''
-        POSTGRES_USER: 'postgres'
-        POSTGRES_HOST_AUTH_METHOD: 'trust'
+      POSTGRES_PASSWORD: ''
+      POSTGRES_USER: 'postgres'
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
     volumes:
       - "postgres-data:/var/lib/postgresql/data"
     ports:
@@ -50,7 +50,7 @@ services:
   geth:
     image: ethereum/client-go:v1.10.23
     ports:
-      - "127.0.0.1:8545:8545"
+      - "8545:8545"
       - "127.0.0.1:8551:8551"
       - "127.0.0.1:8546:8546"
       - "127.0.0.1:30303:30303"
@@ -163,7 +163,6 @@ services:
     depends_on:
       - geth
       - redis
-
 
   sequencer_b:
     pid: host # allow debugging
