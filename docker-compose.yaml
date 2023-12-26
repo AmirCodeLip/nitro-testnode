@@ -27,7 +27,7 @@ services:
       DATABASE_URL: postgresql://postgres:@postgres:5432/blockscout
       ECTO_USE_SSL: "false"
     ports:
-      - "127.0.0.1:4000:4000"
+      - "4000:4000"
 
   postgres:
     image: postgres:13.6
